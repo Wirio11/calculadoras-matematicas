@@ -178,6 +178,9 @@ footer {
     padding: 10px;
     border: 2px solid #000016;
     border-radius: 10px;
+    box-sizing: border-box;
+    width: 180px;
+
 }
 
 .menu a {
@@ -233,5 +236,29 @@ footer {
         padding: 12px 20px;
         min-height: 44px;
         margin: 8px 0 0 0;
+    }
+}
+
+@media(max-width: 1200px) {
+    main {
+        width: calc(100% - 260px);
+        max-width: 700px;
+        margin: 3px 20px 0 220px;
+    }
+
+    .h1 {
+        width: calc(100% - 260px);
+        max-width: 700px;
+        margin: 3px 20px 0 220px;
+    }
+
+    .menu {
+        left: 10px;
+    }
+}
+@media(max-width: 700px) {
+    .menu {
+        max-height: 50vh;
+        overflow-y: auto;
     }
 }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/potencia.js"></script>
+    <title>Potência</title>
+    
+</head>
+
+<body>
+    <h1 class="h1">Calculadora Potência</h1>
+    <main>
+        <nav class="menu">
+            <h3>Navegue</h3>
+            <a href="index_provisorio.html">Início</a>
+            <a href="pitagoras.html">Pitágoras</a>
+            <a href="bhaskara.html">Bhaskara</a>
+            <a href="potencia.html">Potência</a>
+            <a href="porcentagem.html">Porcentagem</a>
+        </nav>
+        <h1>Calculadora de Potência</h1>
+        <form action="">
+            <p>Informe a base:
+                <input class="input" type="number" id="base"
+                    onkeydown="if (event.key === 'e' || event.key === 'E') { event.preventDefault(); }">
+            </p>
+            <p>Informe o expoente:
+                <input class="input" type="number" id="expoente"
+                    onkeydown="if (event.key === 'e' || event.key === 'E') { event.preventDefault(); }">
+            </p>
+            <input class="btt" type="button" value="Calcular" onclick="calcularPotencia()">
+            <input type="button" class="btt" value="Limpar" id="limpar" onclick="limparInput()">
+        </form>
+        <h1 class="grafarResultado" id="resultado"></h1>
+    </main>
+    <footer>
+        <p>Produzido por ValverdeTech</p>
+    </footer>
+</body>
+
+</html>

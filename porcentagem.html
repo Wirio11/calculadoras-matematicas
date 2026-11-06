@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/porcentagem.js"></script>
+    <title>Porcentagem</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="h1">Calculadora Porcentagem</h1>
+    </header>
+    <main>
+        <nav class="menu">
+            <h3>Navegue</h3>
+            <a href="index_provisorio.html">Início</a>
+            <a href="pitagoras.html">Pitágoras</a>
+            <a href="bhaskara.html">Bhaskara</a>
+            <a href="potencia.html">Potência</a>
+            <a href="porcentagem.html">Porcentagem</a>
+        </nav>
+        <h2>Qual calculo deseja fazer?</h2>
+        <select id="calculo" onchange="escolherCalculo()">
+            <option value="" selected disabled>Selecione</option>
+            <option value="X%valor">Quanto é X% de um valor?</option>
+            <option value="porcentagem">Qual porcentagem um valor representa de outro?</option>
+            <option value="aumentar">Aumentar um valor em X%?</option>
+            <option value="diminuir">Diminuir um valor em X%?</option>
+        </select>
+        <div>
+            <p id="porcentagem" hidden>Digite a porcentagem (valor de "X"):
+                <input class="input" type="number" id="porcentagem_input">
+            </p>
+            <p id="valorTotal" hidden>Digite o valor:
+                <input class="input" type="number" id="valor_total">
+            </p>
+            <p id="vParcial" hidden>Digite valor parcial:
+                <input class="input" type="number" id="v_parcial">
+            </p>
+            <p id="vTotal" hidden>Digite o valor total:
+                <input class="input" type="number" id="v_total">
+            </p>
+            <p id="porcentagemAumentar" hidden>Digite a porcentagem que deseja aumentar:
+                <input class="input" type="number" id="porcentagem_aumentar">
+            </p>
+            <p id="valorAumentar" hidden>Digite o valor a ser aumentado:
+                <input class="input" type="number" id="valor_aumentar">
+            </p>
+            <p id="valorDiminuir" hidden>Digite o valor total:
+                <input class="input" type="number" id="valor_diminuir">
+            </p>
+            <p id="porcentagemDiminuir" hidden>Digite a porcentagem que deseja diminuir:
+                <input class="input" type="number" id="porcentagem_diminuir">
+            </p>
+            <input class="btt" type="button" id="calcular" value="Calcular" onclick="calcular()" hidden>
+            <input class="btt" type="button" id="limpar" value="Limpar" onclick="limpar()" hidden>
+        </div><br>
+
+        <h1 class="grafarResultado" id="resultado"></h1>
+        <h1 id="explicacao"></h1>
+    </main>
+    <footer>
+        <p>Produzido por ValverdeTech</p>
+    </footer>
+</body>
+
+</html>

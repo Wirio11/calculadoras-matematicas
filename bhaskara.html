@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+    <link rel="stylesheet" href="css/style.css">
+    <h1 class="h1">Calculadora Bhaskara</h1>
+</head>
+
+<body>
+    <main>
+        <nav class="menu">
+            <h3>Navegue</h3>
+            <a href="index_provisorio.html">Início</a>
+            <a href="pitagoras.html">Pitágoras</a>
+            <a href="bhaskara.html">Bhaskara</a>
+            <a href="potencia.html">Potência</a>
+            <a href="porcentagem.html">Porcentagem</a>
+        </nav>
+        <form action="">
+            <div class="ddd">
+                <p class="receberValor" id="p1">
+                    Informe o valor de A: <input class="input" type="number" id="a"
+                        onkeydown="if (event.key === 'e' || event.key === 'E') { event.preventDefault(); }"></p>
+                <p class="receberValor" id="p2">
+                    Informe o valor de B: <input class="input" type="number" id="b"
+                        onkeydown="if (event.key === 'e' || event.key === 'E') { event.preventDefault(); }"></p>
+                <p class="receberValor" id="p3">
+                    Informe o valor de C: <input class="input" type="number" id="c"
+                        onkeydown="if (event.key === 'e' || event.key === 'E') { event.preventDefault(); }"><br></p>
+            </div>
+            <div id="sumir">
+                <input class="btt" type="button" value="Calcular" onclick="chamarDelta()">
+
+                <h1 id="dt"></h1>
+                <h1 id="mostrarDelta"></h1><br>
+            </div>
+            <div>
+                <input type="button" id="meuBotao1" onclick="bhaskara()" hidden>
+                <button id="meuBotao2" hidden></button>
+            </div>
+
+            <h1 id="opcao"></h1>
+
+            <div>
+                <input type="button" id="botaospf" onclick="spf()" hidden></button>
+                <input type="button" id="botaoN" onclick="decimal()" hidden>
+            </div>
+            <div>
+                <h1 id="formula1"></h1>
+                <h1 id="formula2"></h1>
+            </div>
+            <div>
+                <h1 id="deltainteiro1"></h1>
+                <h1 id="deltainteiro2"></h1>
+            </div>
+            <h1 id="rx1"></h1>
+            <h1 id="rx2"></h1>
+
+        </form>
+    </main>
+    <footer>
+        <p>Produzido por ValverdeTech</p>
+    </footer>
+</body>
+
+</html>

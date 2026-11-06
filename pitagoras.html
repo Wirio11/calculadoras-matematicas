@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/pitagoras.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pitagoras</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="h1">Calculadora Teorema de Pitágoras</h1>
+    </header>
+
+    <main>
+        <nav class="menu">
+            <h3>Navegue</h3>
+            <a href="index_provisorio.html">Início</a>
+            <a href="pitagoras.html">Pitágoras</a>
+            <a href="bhaskara.html">Bhaskara</a>
+            <a href="potencia.html">Potência</a>
+            <a href="porcentagem.html">Porcentagem</a>
+        </nav>
+        <h2>Qual seria a incógnita do seu problema?</h2>
+        <select id="incognita" onchange="escolherIncognita()">
+            <option value="" selected disabled>Selecione</option>
+            <option value="hipotenusa">Hipotenusa</option>
+            <option value="cateto_oposto">Cateto Oposto</option>
+            <option value="cateto_adjacente">Cateto Adjacente</option>
+        </select>
+        <div>
+            <p id="CO" hidden>Valor do Cateto Oposto:
+                <input class="input" type="number" id="cateto_oposto"
+                    onkeydown="if (event.key === 'e' || event.key === 'E') { event.preventDefault(); }">
+            </p>
+            <p id="CA" hidden>Valor do Cateto Adjacente:
+                <input class="input" type="number" id="cateto_adjacente"
+                    onkeydown="if (event.key === 'e' || event.key === 'E') { event.preventDefault(); }">
+            </p>
+            <p id="H" hidden>Valor da Hipotenusa:
+                <input class="input" type="number" id="hipotenusa"
+                    onkeydown="if (event.key === 'e' || event.key === 'E') { event.preventDefault(); }">
+            </p>
+        </div><br>
+        <button class="btt" id="calcular" onclick="calcular()" hidden>Calcular</button>
+        <button class="btt" id="limpar" onclick="limpar()" hidden>Limpar</button>
+        <h1 class="grafarResultado" id="resultado"></h1>
+    </main>
+    <footer>
+        <p>Produzido por ValverdeTech</p>
+    </footer>
+</body>
+
+</html>
